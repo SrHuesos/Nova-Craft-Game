@@ -15,3 +15,7 @@ Estudiante de Ingeniería Multimedia interesado en el desarrollo
 de experiencias digitales interactivas, diseño de videojuegos,
 programación y creación de contenidos multimedia.
 </p>
+<p>
+Mi plato favorito es el chicharron con limon
+</p>
+<img src="Jhoan/plato-favorito.jpg.png" alt="Comida favorita" width="200">
