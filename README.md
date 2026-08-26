@@ -4,12 +4,14 @@
 
 <img src="Jhoan/foto-perfil.jpg.png" alt="Foto personal" width="200">
 
-**Rol:** undefined
+<p><strong>Rol:</strong> Estudiante de Ingeniería Multimedia</p>
 
-**Ubicación:** Colombia
+<p><strong>Ubicación:</strong> Colombia</p>
 
-**Perfil:**
+<p><strong>Perfil:</strong></p>
 
+<p>
 Estudiante de Ingeniería Multimedia interesado en el desarrollo
 de experiencias digitales interactivas, diseño de videojuegos,
 programación y creación de contenidos multimedia.
+</p>
