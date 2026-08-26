@@ -2,7 +2,7 @@
 
 ## Jhoan Benavides
 
-![Foto personal](Jhoan/foto-perfil.jpg.png) 
+<img src="Jhoan/foto-perfil.jpg.png" alt="Foto personal" width="200">
 
 **Rol:** undefined
 
