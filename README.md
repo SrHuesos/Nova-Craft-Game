@@ -1,2 +1,2 @@
-# Nova-Craft-Game
-Repositorio para el desarrollo de la Etapa 1 de Programación para Videojuegos
+# HELLO Soy Daniel ⚡︎
+Daniel Alexander Mier Cardenas
