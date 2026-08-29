@@ -85,8 +85,6 @@ Por su parte, **Papers, Please** utiliza la simulación de un proceso burocráti
 
 A partir de estos tres casos, se puede concluir que las mecánicas, los sistemas de juego, la interfaz, la narrativa y la representación tienen un papel fundamental en la manera en que un videojuego comunica un propósito social, educativo o cultural.
 
-Por esta razón, el desarrollo de un videojuego con propósito requiere considerar no solamente qué mensaje se quiere comunicar, sino también **cómo las decisiones del jugador pueden hacer que ese mensaje sea experimentado dentro del propio juego**.
-
 ---
 
 # Referencias
