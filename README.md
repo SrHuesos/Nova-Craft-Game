@@ -20,5 +20,3 @@ Mi plato favorito es el chicharron con limon
 </p>
 <img src="Jhoan/plato-favorito.jpg.png" alt="Comida favorita" width="200">
 
-# HELLO Soy Daniel ⚡︎
-Daniel Alexander Mier Cardenas
