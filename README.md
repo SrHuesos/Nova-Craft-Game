@@ -17,4 +17,5 @@ Soy estudiante de Ingeniería Multimedia, interesado en el desarrollo de videoju
 
 ## Mi plato favorito
 La salchipapa yeeesss
+
 ![Salchipapa](Reposi/salschipapa.jpg)
