@@ -16,5 +16,5 @@ Bogotá, Colombia.
 Soy estudiante de Ingeniería Multimedia, interesado en el desarrollo de videojuegos, diseño 3D, animación, diseño interactivo y producción audiovisual.
 
 ## Mi plato favorito
-
+La salchipapa yeeesss
 ![Salchipapa](Reposi/salschipapa.jpg)
