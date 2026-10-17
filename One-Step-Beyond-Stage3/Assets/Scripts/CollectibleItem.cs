@@ -75,6 +75,12 @@ public class CollectibleItem : MonoBehaviour
     {
         Debug.Log("Biodiversity discovered and collected: " + itemName);
 
+        // Notify the level manager
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.AddCollectible();
+        }
+
         // Hide UI prompt before destroying the object
         if (interactionPromptUI != null)
         {
