@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5496277547301250260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0061856
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0067987
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.96
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.69
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000005338508
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000053385072
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6551e7beb5dc9a84e9bcb31560353f55, type: 2}
+    - target: {fileID: 919132149155446097, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      propertyPath: m_Name
+      value: plantaAcuatica1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1273837500980314992}
+  m_SourcePrefab: {fileID: 100100000, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+--- !u!1 &4649925516413213061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40c603c43c67bd74aa8ff5a8a4b214a9, type: 3}
+  m_PrefabInstance: {fileID: 5496277547301250260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1273837500980314992
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649925516413213061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 63.8
+  m_Height: 190.0969
+  m_Direction: 1
+  m_Center: {x: 1.5925713, y: 8.258564, z: -3.0385902}
