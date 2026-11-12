@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 30
-  productGUID: 5ebda5a7ede520d45a904a75a8ef10e4
+  productGUID: 776b1c1ab054ea24db5711dbe9eb0c9d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: One-Step-Beyond-Stage3
+  productName: juego_One-Step-Beyond-Stage3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -858,14 +858,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: One-Step-Beyond-Stage3
+  metroPackageName: juego_One-Step-Beyond-Stage3
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: One-Step-Beyond-Stage3
+  metroApplicationDescription: juego_One-Step-Beyond-Stage3
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -933,13 +933,13 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: 54536b8f-ad16-40ef-906e-114a638f5276
+  cloudProjectId: 6e3d8263-e146-4c12-a20f-155bab5aa762
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: One-Step-Beyond-Stage3
+  projectName: juego_One-Step-Beyond-Stage3
   organizationId: jhoanbenavides8
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
