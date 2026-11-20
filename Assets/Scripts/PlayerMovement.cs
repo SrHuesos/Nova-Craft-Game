@@ -5,17 +5,19 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float rotationSpeed = 15f;
+    public float gravity = -20f;
 
     [Header("Stealth / Sigilo (GDD)")]
     public bool isHiding = false;
-    
+
     [Header("Stealth Visual Effect")]
     public Color normalColor = Color.white;
-    public Color stealthTint = new Color(0.5f, 0.7f, 1f, 1f); // Tinte azulado/sigiloso
+    public Color stealthTint = new Color(0.5f, 0.7f, 1f, 1f);
 
     private CharacterController characterController;
     private Animator animator;
     private SkinnedMeshRenderer[] skinRenderers;
+    private float verticalVelocity = 0f;
 
     private void Awake()
     {
@@ -34,20 +36,31 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (movement.magnitude >= 0.1f)
+        if (characterController.isGrounded && verticalVelocity < 0f)
         {
-            characterController.Move(movement * moveSpeed * Time.deltaTime);
+            verticalVelocity = -2f;
+        }
+        else
+        {
+            verticalVelocity += gravity * Time.deltaTime;
+        }
 
-            Quaternion targetRotation = Quaternion.LookRotation(movement);
+        Vector3 finalVelocity = moveDirection * moveSpeed;
+        finalVelocity.y = verticalVelocity;
+
+        characterController.Move(finalVelocity * Time.deltaTime);
+
+        if (moveDirection.magnitude >= 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
         if (animator != null)
         {
-            float speed = movement.magnitude;
-            animator.SetFloat("Speed", speed);
+            animator.SetFloat("Speed", moveDirection.magnitude);
             animator.SetBool("IsHiding", isHiding);
         }
     }
@@ -76,18 +89,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdatePlayerStealthVisual(bool hiding)
     {
-        // Cambia el material a Opaque por seguridad para que nunca pierda texturas
         foreach (var renderer in skinRenderers)
         {
             foreach (var mat in renderer.materials)
             {
-                // Aseguramos que conserve el modo Opaque
                 if (mat.HasProperty("_Surface"))
                 {
-                    mat.SetFloat("_Surface", 0f); // 0 = Opaque en URP Lit
+                    mat.SetFloat("_Surface", 0f);
                 }
 
-                // Aplica un tinte visual de sigilo sin romper la textura ni el color base
                 if (mat.HasProperty("_BaseColor"))
                 {
                     mat.SetColor("_BaseColor", hiding ? stealthTint : normalColor);

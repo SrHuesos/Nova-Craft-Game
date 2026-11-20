@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
@@ -11,21 +10,37 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [Header("UI Panels")]
-    public GameObject notificationBadge; // Un pequeño brillo o punto de notificación en el botón
+    public GameObject notificationBadge;
 
     [Header("HUD Counters")]
-    public TMP_Text collectiblesCounterText; // Muestra "1 / 3"
+    public TMP_Text collectiblesCounterText;
 
     private int currentCollected = 0;
     private int totalItems = 3;
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     void Start()
     {
+        if (notificationBadge != null) notificationBadge.SetActive(false);
+        UpdateCounterUI();
+    }
+
+    public void ResetCounter(int newTotalItems)
+    {
+        currentCollected = 0;
+        totalItems = Mathf.Max(1, newTotalItems);
         if (notificationBadge != null) notificationBadge.SetActive(false);
         UpdateCounterUI();
     }
@@ -35,7 +50,6 @@ public class UIManager : MonoBehaviour
         currentCollected++;
         UpdateCounterUI();
 
-        // Enciende el aviso visual para que el jugador sepa que hay algo nuevo en la libreta
         if (notificationBadge != null)
         {
             notificationBadge.SetActive(true);
