@@ -165,10 +165,10 @@ MonoBehaviour:
   viewAngle: 90
   playerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   eyeHeight: 1.5
   waypoints:
   - {fileID: 0}
