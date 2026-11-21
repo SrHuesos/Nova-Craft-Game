@@ -1,11 +1,9 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
-/// <summary>
-/// Accessible field notebook controller for One Step Beyond.
-/// Toggles the notebook with B without modifying player movement.
-/// </summary>
 public class FieldNotebookUI : MonoBehaviour
 {
     [Header("Notebook")]
@@ -23,17 +21,18 @@ public class FieldNotebookUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Keyboard.current == null)
+            return;
+
+        if (Keyboard.current.bKey.wasPressedThisFrame)
         {
-            // Do not toggle the notebook while typing in an input field.
             if (InputFieldIsFocused())
                 return;
 
             SetNotebookOpen(!IsOpen);
         }
 
-        // Escape also closes the notebook.
-        if (IsOpen && Input.GetKeyDown(KeyCode.Escape))
+        if (IsOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             SetNotebookOpen(false);
         }
@@ -58,7 +57,9 @@ public class FieldNotebookUI : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
         }
 
-        Debug.Log(open ? "Field notebook opened." : "Field notebook closed.");
+        Debug.Log(open
+            ? "Field notebook opened."
+            : "Field notebook closed.");
     }
 
     private bool InputFieldIsFocused()
@@ -66,7 +67,8 @@ public class FieldNotebookUI : MonoBehaviour
         if (EventSystem.current == null)
             return false;
 
-        GameObject selected = EventSystem.current.currentSelectedGameObject;
+        GameObject selected =
+            EventSystem.current.currentSelectedGameObject;
 
         if (selected == null)
             return false;
