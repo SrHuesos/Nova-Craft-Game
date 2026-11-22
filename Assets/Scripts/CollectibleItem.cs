@@ -16,6 +16,10 @@ public class CollectibleItem : MonoBehaviour
     [Header("UI Prompt")]
     public GameObject interactionPromptUI;
 
+    [Header("Audio Settings")]                  // SONIDO
+    public AudioSource audioSource;             // SONIDO
+    public AudioClip collectSound;              // SONIDO
+
     private Transform playerTransform;
     private Animator playerAnimator;
     private bool isPlayerNearby = false;
@@ -88,6 +92,11 @@ public class CollectibleItem : MonoBehaviour
     {
         isCollected = true;
         Debug.Log("[CollectibleItem] Recolectado: " + itemName);
+
+        if (audioSource != null && collectSound != null)    // SONIDO
+        {                                                   // SONIDO
+            audioSource.PlayOneShot(collectSound);          // SONIDO
+        }                                                   // SONIDO
 
         if (playerAnimator != null)
         {
